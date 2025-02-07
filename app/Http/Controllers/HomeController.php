@@ -49,6 +49,29 @@ class HomeController extends Controller
         return redirect('home')->with('message', "บันทึกสำเร็จ");
     }
 
+    public function videoAll()
+    {
+        $data = DB::table('video_urls')->get();
+        return view('video_All', compact('data'));
+    }
+    public function video(string $id)
+    {
+        $videoId = DB::table('video_urls')->where('id', $id)->first();
+        $dataAll = DB::table('video_urls')
+            ->where('id', '>', $id) // ดึงเฉพาะ id ที่มากกว่า $id
+            ->orderBy('id', 'asc')  // เรียงลำดับจากน้อยไปมาก
+            ->limit(4)              // จำกัด 5 รายการ
+            ->get();
+        $dataAll2 = DB::table('video_urls')
+            ->where('id', '<', $id) // ดึงเฉพาะ id ที่มากกว่า $id
+            ->orderBy('id', 'asc')  // เรียงลำดับจากน้อยไปมาก
+            ->limit(4)              // จำกัด 5 รายการ
+            ->get();
+
+
+
+        return view('videoId', compact('dataAll', 'dataAll2', 'videoId'));
+    }
     public function show(string $id)
     {
         //

@@ -50,14 +50,16 @@
     @else
         {{-- login แล้ว --}}
         <div class="wrapper">
+
             @include('layouts.sidebar')
             <div class="main-panel">
+
                 @include('layouts.navbar')
                 @yield('content')
                 @include('layouts.footer')
             </div>
         </div>
-        
+
     @endguest
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

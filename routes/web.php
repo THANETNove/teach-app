@@ -23,3 +23,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/create-video', [App\Http\Controllers\HomeController::class, 'create'])->name('create-video');
 Route::post('/register-store', [App\Http\Controllers\HomeController::class, 'store'])->name('register-store');
 Route::get('/delete-user/{id}', [App\Http\Controllers\HomeController::class, 'destroy'])->name('delete-user');
+Route::get('/video-all', [App\Http\Controllers\HomeController::class, 'videoAll'])->name('video-all');
+Route::get('/video/{id}', [App\Http\Controllers\HomeController::class, 'video'])->name('video');

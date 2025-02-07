@@ -1,22 +1,28 @@
-<div class="col-md-4">
-    <div class="card card-secondary bg-secondary-gradient">
-        <div class="card-body curves-shadow">
-            <img src="assets/img/visa.svg" height="12.5" alt="Visa Logo">
-            <h2 class="py-4 mb-0">1234 **** **** 5678</h2>
-            <div class="row">
-                <div class="col-8 pe-0">
-                    <h3 class="fw-bold mb-1">Sultan Ghani</h3>
-                    <div class="text-small text-uppercase fw-bold op-8">
-                        Card Holder
+@extends('layouts.app')
+@section('content')
+    <div class="container">
+        <div class="page-inner">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">หมวดหมู่</div>
+
+                        <a href="{{ url('video-all') }}">
+                            <div class="col-sm-6 col-md-3 mt-5">
+                                <div class="card card-stats card-info card-round">
+                                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                        <img src="assets/img/OIUFOY1-01.png" alt="image profile" height="150px"
+                                            width="150px" />
+                                        <div class="physics">ฟิสิกส์</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
                     </div>
-                </div>
-                <div class="col-4 ps-0 text-end">
-                    <h3 class="fw-bold mb-1">4/26</h3>
-                    <div class="text-small text-uppercase fw-bold op-8">
-                        Expired
-                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-</div>
+@endsection

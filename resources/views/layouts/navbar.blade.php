@@ -249,7 +249,7 @@
                         </div>
                         <span class="profile-username">
 
-                            <span class="fw-bold">{{ Auth::user()->username }}</span>
+                            <span class="fw-bold">{{ Auth::user()->name }}</span>
                         </span>
                     </a>
                     <ul class="dropdown-menu dropdown-user animated fadeIn">
@@ -261,7 +261,7 @@
                                             class="avatar-img rounded" />
                                     </div>
                                     <div class="u-text">
-                                        <h4>{{ Auth::user()->username }}</h4>
+                                        <h4>{{ Auth::user()->name }}</h4>
                                         <p class="text-muted">{{ Auth::user()->email }}</p>
                                         {{--  <a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View
                                             Profile</a> --}}
