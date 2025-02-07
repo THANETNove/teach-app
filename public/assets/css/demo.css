@@ -575,3 +575,24 @@ body[data-background-color="dark"] .demo-icon .icon-class {
 .nav-video-home {
   margin-top: 32px;
 }
+
+.body-welcome {
+  margin-top: 80px;
+
+}
+
+h1,
+h2,
+h3,
+p {
+  color: #f1c40f;
+  /* เปลี่ยนเป็นสีเหลืองเพื่อให้อ่านง่าย */
+}
+
+h1 {
+  font-size: 32px !important;
+}
+
+h2 {
+  font-size: 18px !important;
+}
