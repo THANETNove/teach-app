@@ -57,6 +57,7 @@
                 @include('layouts.footer')
             </div>
         </div>
+        
     @endguest
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
