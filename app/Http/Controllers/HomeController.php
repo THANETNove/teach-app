@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\VideoUrl;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -25,8 +26,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data = DB::table('video_urls')->get();
-        return view('home', compact('data'));
+        if (Auth::user()->status == 1) {
+            $data = DB::table('video_urls')->get();
+            return view('home', compact('data'));
+        } else {
+            return view('category');
+        }
     }
 
     public function create()
